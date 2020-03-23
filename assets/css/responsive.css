@@ -1,0 +1,35 @@
+/* Mobile - Tablet */
+@media (max-width:1023px){
+    :root {
+        --navbar-height:0px;
+        --header-height: 68px;
+    }
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+    .header__cart-list {
+        position: fixed;
+        top: var(--header-height);
+        right: 0px;
+        width: 100%;
+    }
+}
+
+/* Tablet */
+@media (min-width:740px) and (max-width: 1023px){
+    .hide-on-tablet {
+        display: none;
+    }
+    .header__cart {
+        width: 80px;
+        text-align: right;
+    }
+}
+
+
+/* Moblie */
+@media (max-width:739px){
+    .hide-on-mobile {
+        display: none;
+    }
+}

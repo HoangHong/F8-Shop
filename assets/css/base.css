@@ -1,0 +1,221 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --star-gold-color:#FFCE3D;
+    --primary-color:rgb(248, 74, 47);
+    --border-color:#dbdbdb;
+    --navbar-height:34px;
+    --header-height: 120px;
+    --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
+
+}
+*{
+    box-sizing: inherit;
+}
+html {
+    /* 10px */
+    font-size: 62.5%; 
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+/* ==================== Responsive ============ */
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+
+}
+
+/* ============ Test ========== */
+.grid__column-2 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 16.6667%;
+
+}
+.grid__column-2-4 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+}
+.grid__column-10 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 83.3334%;
+}
+
+/* ==== Animation ==== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes growth {
+    from {
+        transform: scale(var(--growth-from));
+    }
+    to {
+        transform: scale(var(--growth-to));
+    }
+}
+/* ===== Modadl ====  */
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    animation: fadeIn linear 0.1s;
+    
+}
+.modal__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+}
+.modal__body {
+   --growth-from: 0.7;
+   --growth-to: 1;
+   animation: growth linear 0.1s;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+   
+}
+
+
+/* ===== Button Style ====== */
+.btn {
+    min-width: 124px;
+    height: 34px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.4rem;
+    padding: 0 12px;
+    cursor: pointer;
+    color: var(--text-color);
+    outline: none;
+    background-color: var(--white-color);
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 3.6rem;
+}
+.btn.btn--normal:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+.btn--size-s {
+    height: 32px;
+    font-size: 1.2rem;
+    padding: 0 8px;
+}
+.btn.btn--primary {
+    background: var(--primary-color);
+    color: var(--white-color);
+}
+.btn.btn--disabled {
+    color:#949494;
+    cursor: default;
+    background: #c3c3c3;
+}
+
+
+/*  ============= Selection =============== */
+.select-input {
+    height: 34px;
+    padding: 0 12px;
+    min-width: 200px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
+    position: relative;
+    box-shadow: 0 1px 5px #d8d5d5;
+}
+.select-input:hover .select-input__list {
+    display: block;
+}
+.seclect-input__label {
+    font-size: 1.4rem;
+}
+.seclect-input__icon {
+    font-size: 1.2rem;
+    color: #d1d0d0;
+    position: relative;
+    top: 2px;
+}
+.select-input__list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 23px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    padding: 8px 16px;
+    list-style: none;
+    display: none;
+    z-index: 1;
+}
+.select-input__list::before {
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    top:-4px;
+    left: 0;
+    content: "";
+}
+.select-input__link {
+    text-decoration: none;
+    color:var(--text-color);
+    font-size: 1.4rem;
+    display: block;
+    padding: 4px 0;
+}
+.select-input__link:hover {
+    color: var(--primary-color);
+}
+
+/* =================== Pagination UI============== */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+.pagination-item {
+    margin: 0 16px;
+}
+.pagination-item__link {
+    --height: 30px;
+    display: block;
+    text-decoration: none;
+    font-size: 2rem;
+    color: #939393;
+    min-width: 40px;
+    height: var(--height);
+    line-height: var(--height);
+
+}
+.pagination-item__active .pagination-item__link {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    text-align: center;
+    border-radius: 2px;
+}
+.pagination-item__active .pagination-item__link:hover {
+    filter: brightness(60%);
+}
+.pagination-item__icon {
+
+}
