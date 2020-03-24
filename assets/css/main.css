@@ -315,6 +315,133 @@
     font-weight: 400;
 
 }
+ 
+
+/*  ================ header sort bar============ */
+.header__sort-bar {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    height: var(--header-sort-bar-height);
+    background-color: var(--white-color);
+    margin: 0;
+    padding-left: 0;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    display: none;
+
+}
+.header__sort-item {
+    flex: 1;
+    list-style: none;
+}
+.header__sort-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.4rem;
+    display: block;
+    height: 100%;
+    line-height: var(--header-sort-bar-height);
+    text-align: center;
+    position: relative;
+}
+.header__sort-item:first-child .header__sort-link::before {
+    display: none;
+}
+
+.header__sort-link::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    height: 60%;
+    left: 0;
+    border-left: 1px solid #e5e5e5;
+    transform: translateY(-50%);
+
+}
+.header__sort-item--active .header__sort-link {
+    color: var(--primary-color);
+}
+
+/* =========== navbar on mobile ========= */
+.nav__moblie {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width:320px;
+    max-width: 100%;
+    background-color: var(--white-color);
+    z-index: 100;
+    transform: translateX(-100%);
+    transition: transform linear 0.3s;
+
+}
+.nav_input:checked ~.nav__moblie {
+    transform: translateX(0%);
+}
+.nav__moblie-list {
+    list-style: none;
+    margin-top: 30px;
+    padding-left: 0;
+}
+.nav__moblie-list li:first-child {
+    margin-top: 50px;
+}
+.nav__moblie-link {
+    text-decoration: none;
+    font-size: 2rem;
+    color: var(--text-color);
+    display: block;
+    padding: 12px 0;
+    margin-left: 20px;
+}
+.nav__moblie-list li:hover {
+    background-color:rgba(0,0,0,.05) ;
+    
+}
+.nav__mobile-colse {
+    font-size: 3rem;
+    color: #909090;
+    position: absolute;
+    top: 1.2rem;
+    right: 2rem;
+    display: block;
+    cursor: pointer;
+
+
+}
+.nav__moblie-link i {
+    font-size:2rem ;
+    color:#909090;
+    margin-right: 8px;
+}
+.nav__bars-btn {
+    height:var((--header-height)/2);
+    color:var(--white-color);
+    display: none;
+    padding-right: 8px;
+}
+.nav__bars-btn i {
+    font-size: 3rem;
+}
+.nav__overlay {
+    position: fixed ;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .3);
+    display: none;
+    z-index: 20;
+    animation: fadeIn linear 0.2s;
+
+}
+.nav_input:checked ~ .nav__overlay {
+    display: block;
+
+}
 
 /* ==== Authen modal ======  */
 .auth-form {
@@ -1148,7 +1275,7 @@ i.home-product-item__like-fill {
     text-decoration: none;
 }
 .footer__download-apps {
-    margin-left: 8px;
+    margin-left: 16px;
     display: flex;
     flex-direction: column;
     justify-content: center;

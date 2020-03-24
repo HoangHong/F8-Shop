@@ -193,6 +193,43 @@
           <!-- ======= Header with search =========  -->
 
           <div class="header-with-search">
+            <!-- ========== Navbar on Mobile ========= -->
+            <label class="nav__bars-btn hide-on-tablet" for="nav__mobile-input">
+              <i class="fas fa-bars"></i>
+            </label>
+            <input type="checkbox" name="" id="nav__mobile-input" class="nav_input" hidden>
+            <label class="nav__overlay" for="nav__mobile-input">
+            </label>
+            <nav class="nav__moblie hide-on-tablet">
+              <label class="nav__mobile-colse" for="nav__mobile-input">
+                <i class="fas fa-times"></i>
+              </label>
+              <ul class="nav__moblie-list">
+                <li>
+                  
+                  <a href="" class="nav__moblie-link">
+                    <i class="fas fa-user-plus"></i>
+                    Đăng ký
+                  </a>
+                </li>
+                <li>
+                  
+                  <a href="" class="nav__moblie-link">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Đăng xuất
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="nav__moblie-link">
+                    <i class="fas fa-cog"></i>
+                    Cài đặt
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <label for="" class="header__search-mobile">
+              
+            </label>
             <div class="header__logo hide-on-tablet">
                 <a href="/" class="header__logo-link">
                     <svg class="header__logo-img" viewBox="0 0 192 65">
@@ -205,14 +242,9 @@
                       </svg>
                 </a>
             </div>
-            <div class="header__search">
+            <div class="header__search hide-on-mobile">
               <div class="header__search-inpt-wrap">
-                <input
-                  type=""
-                  class="header__search-inpt"
-                  placeholder="Nhập để tìm kiếm"
-                />
-
+                <input type="" class="header__search-inpt" placeholder="Nhập để tìm kiếm"/>
                 <!-- ============ Search history ============== -->
                 <div class="header__search-history">
                   <h3 class="header__search-history-heading">
@@ -423,6 +455,20 @@
             </div>
           </div>
         </div>
+        <ul class="header__sort-bar">
+            <li class="header__sort-item">
+              <a href="" class="header__sort-link">Liên quan</a>
+            </li>
+            <li class="header__sort-item header__sort-item--active">
+              <a href="" class="header__sort-link">Mới nhất</a>
+            </li>
+            <li class="header__sort-item">
+              <a href="" class="header__sort-link">Bán chạy</a>
+            </li>
+            <li class="header__sort-item">
+              <a href="" class="header__sort-link">Giá</a>
+            </li>
+        </ul>
       </header>
 
       <!-- CONTAINER -->
