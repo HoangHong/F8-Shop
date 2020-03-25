@@ -113,4 +113,11 @@
     .footer__content {
         padding: 0 16px !important;
     }
+    .footer__heading {
+        text-align: center;
+    }
+    .footer__download,
+    .footer__list-item-link {
+        justify-content: center;
+    }
 }
