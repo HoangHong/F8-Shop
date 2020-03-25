@@ -39,6 +39,13 @@
     .header__sort-bar {
         display: flex;
     }
+    .app__content {
+        padding-top: 8px;
+    }
+    .mobile-category {
+        display: flex;
+    
+    }
     
 }
 
@@ -51,8 +58,11 @@
         width: 80px;
         text-align: right;
     }
-    .footer__download-apps {
-        margin-left: 8px;
+    .header-with-search {
+        margin: 0;
+    }
+    .header_cart-notice {
+        right: 2px;
     }
 }
 
@@ -64,5 +74,43 @@
     }
     .nav__bars-btn {
         display: block;
+    }
+    .header-with-search {
+        justify-content: space-between;
+    }
+    .header__cart {
+        width: unset;
+    }
+    .header__search {
+        margin-left: 6px;
+    }
+    .header__search-btn,
+    .header__search-btn:hover {
+        background-color: transparent;
+    }
+    .header__search-btn-icon {
+        font-size: 2rem;
+        color: rgba(0,0,0,0.3);
+    }
+    .header__search-history {
+        width: calc(100% + 62px);
+    }
+    .pagination-item {
+        margin: 0 0px;
+    }
+    .pagination-item__link {
+        min-width: 36px;
+        font-size: 1.8rem;
+        --height: 28px;
+    }
+    .home-product__pagination {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .app__content {
+        margin: 0 4px !important;
+    }
+    .footer__content {
+        padding: 0 16px !important;
     }
 }
